@@ -28,3 +28,6 @@ class ProductPage(BasePage):
         total = float(basket_total.replace("£", "").replace(",", ".").replace(" ", "").replace("\xa0", ""))
         assert price == total, \
             f"Стоимость корзины не совпадает: {price} != {total}"
+
+    def should_be_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Сообщение отобразилось, но должно было исчезнуть"
