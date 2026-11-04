@@ -17,7 +17,3 @@ class LoginPage(BasePage):
 
     def should_be_register_form(self):
         assert self.is_element_present(*LoginPageLocators.reg_form), "Форма регистрации не найдена"
-
-    def go_to_login_page(self):
-        link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-        link.click()
