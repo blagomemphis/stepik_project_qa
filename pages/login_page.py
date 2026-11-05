@@ -24,6 +24,6 @@ class LoginPage(BasePage):
         password_field = self.browser.find_element(*LoginPageLocators.reg_password)
         password_field.send_keys(password)
         confirm_field = self.browser.find_element(*LoginPageLocators.confirm_password)
-        confirm_field.send.keys(password)
+        confirm_field.send_keys(password)
         submit_button = self.browser.find_element(*LoginPageLocators.reg_button)
         submit_button.click()
